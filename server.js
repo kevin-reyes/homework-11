@@ -6,7 +6,7 @@ const {readFile, writeFile} = require ('fs');
 
 // create an express application
 const app = express();
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 
 // Sets up the Express app to handle data parsing
@@ -58,4 +58,3 @@ app.delete('/api/notes/:id', function(req,res){
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
-  
